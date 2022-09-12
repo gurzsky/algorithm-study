@@ -16,4 +16,16 @@ def countItens(list, count):
 
 print(countItens([1, 3, 5, 7, 9], 0))
 
+def higherValue(list, value):
+    if (len(list) == 0):
+        return value
+    else:
+        higher = list.pop(0)
+        if (value < higher):
+            value = higher
+        return higherValue(list, value)
+
+print(higherValue([1, 3, 5, 7, 9, 2, 4], 0))
+
+
 
